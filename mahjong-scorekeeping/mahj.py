@@ -19,7 +19,7 @@ def main(page: ft.Page):
     round_history_data = []
     # level_rows = {}
 
-    levels = [3, 4, 5, 6, 7, 8, 9 10, 13]
+    levels = [3, 4, 5, 6, 7, 8, 9, 10, 13]
 
     # --- SCREEN 1: SETUP CONTROLS ---
     txt_p1 = ft.TextField(label="Player 1", width=85, value="P1")
@@ -95,7 +95,7 @@ def main(page: ft.Page):
 
     drp_winner = ft.Dropdown(label="贏家", width=100)
     drp_level_achieved = ft.Dropdown(label="番數", width=110)
-    drp_winning_method = ft.Dropdown(label="自摸/出銃", width=150)
+    drp_winning_method = ft.Dropdown(label="自摸/出銃", width=140)
     lbl_game_error = ft.Text(value="", color=ft.Colors.RED_ACCENT, weight=ft.FontWeight.BOLD)
 
     history_list_view = ft.ListView(spacing=5, padding=10, height=140, auto_scroll=True)
