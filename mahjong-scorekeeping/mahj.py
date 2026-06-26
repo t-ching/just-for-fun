@@ -22,10 +22,10 @@ def main(page: ft.Page):
     levels = [3, 4, 5, 6, 7, 8, 9, 10, 13]
 
     # --- SCREEN 1: SETUP CONTROLS ---
-    txt_p1 = ft.TextField(label="Player 1", width=85, value="P1")
-    txt_p2 = ft.TextField(label="Player 2", width=85, value="P2")
-    txt_p3 = ft.TextField(label="Player 3", width=85, value="P3")
-    txt_p4 = ft.TextField(label="Player 4", width=85, value="P4")
+    txt_p1 = ft.TextField(label="Player 1", width=80, value="P1")
+    txt_p2 = ft.TextField(label="Player 2", width=80, value="P2")
+    txt_p3 = ft.TextField(label="Player 3", width=80, value="P3")
+    txt_p4 = ft.TextField(label="Player 4", width=80, value="P4")
 
     lbl_setup_error = ft.Text(value="", color=ft.Colors.RED_ACCENT, visible=False)
 
@@ -58,11 +58,11 @@ def main(page: ft.Page):
     for i, fann in enumerate(levels, start=1):
         # chk_box = ft.Checkbox(value=True, on_change=toggle_level_active)
         chk_box = ft.Checkbox(value=True, width=40)
-        name_field = ft.TextField(value=f"{fann} 番", width=90, dense=True)
+        name_field = ft.TextField(value=f"{fann} 番", width=80, dense=True)
         score_field = ft.TextField(
             value="4" if i == 1 else "",
             keyboard_type=ft.KeyboardType.NUMBER,
-            width=90,
+            width=80,
             dense=True,
             on_change=update_all_calculated_fields if i == 1 else None,
             read_only = i > 1,
@@ -71,7 +71,7 @@ def main(page: ft.Page):
         )
 
         double_field = ft.TextField(
-            value="", width=90, dense=True, read_only=True,
+            value="", width=80, dense=True, read_only=True,
             bgcolor=ft.Colors.SURFACE_CONTAINER_HIGHEST, color=ft.Colors.OUTLINE
         )
 
@@ -94,8 +94,8 @@ def main(page: ft.Page):
     scoreboard_container = ft.Column(spacing=10, horizontal_alignment=ft.CrossAxisAlignment.CENTER)
 
     drp_winner = ft.Dropdown(label="贏家", width=100)
-    drp_level_achieved = ft.Dropdown(label="番數", width=110)
-    drp_winning_method = ft.Dropdown(label="自摸/出銃", width=140)
+    drp_level_achieved = ft.Dropdown(label="番數", width=100)
+    drp_winning_method = ft.Dropdown(label="自摸/出銃", width=130)
     lbl_game_error = ft.Text(value="", color=ft.Colors.RED_ACCENT, weight=ft.FontWeight.BOLD)
 
     history_list_view = ft.ListView(spacing=5, padding=10, height=140, auto_scroll=True)
@@ -321,10 +321,10 @@ def main(page: ft.Page):
             ft.Divider(),
             ft.Row([
                 ft.Text("", width=40),
-                ft.Text("\u00A0\u00A0\u00A0Config", width=90, size=14, weight=ft.FontWeight.BOLD),
+                ft.Text("\u00A0\u00A0\u00A0Config", width=80, size=14, weight=ft.FontWeight.BOLD),
                 ft.Text(":"),
-                ft.Text("\u00A0\u00A0\u00A0自摸每人", width=90, size=14, weight=ft.FontWeight.BOLD),
-                ft.Text("\u00A0\u00A0\u00A0全銃", width=90, size=14, weight=ft.FontWeight.BOLD),
+                ft.Text("\u00A0\u00A0\u00A0自摸每人", width=80, size=14, weight=ft.FontWeight.BOLD),
+                ft.Text("\u00A0\u00A0\u00A0全銃", width=80, size=14, weight=ft.FontWeight.BOLD),
             ], alignment=ft.MainAxisAlignment.CENTER),
             ft.Column(level_rows_list, spacing=5, horizontal_alignment=ft.CrossAxisAlignment.CENTER),
             ft.Text("Only uncheck top/bottom boxes.", color=ft.Colors.OUTLINE, width=330),
