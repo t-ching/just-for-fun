@@ -321,9 +321,9 @@ def main(page: ft.Page):
             ft.Divider(),
             ft.Row([
                 ft.Text("", width=40),
-                ft.Text("   Config", width=90, size=14, weight=ft.FontWeight.BOLD),
+                ft.Text("   Config", width=91, size=14, weight=ft.FontWeight.BOLD),
                 ft.Text(":"),
-                ft.Text("   自摸每人", width=90, size=14, weight=ft.FontWeight.BOLD),
+                ft.Text("  自摸每人", width=92, size=14, weight=ft.FontWeight.BOLD),
                 ft.Text("   全銃", width=90, size=14, weight=ft.FontWeight.BOLD),
             ], alignment=ft.MainAxisAlignment.CENTER),
             ft.Column(level_rows_list, spacing=5, horizontal_alignment=ft.CrossAxisAlignment.CENTER),
