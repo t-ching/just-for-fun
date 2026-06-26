@@ -57,7 +57,7 @@ def main(page: ft.Page):
     level_rows_list = []
     for i, fann in enumerate(levels, start=1):
         # chk_box = ft.Checkbox(value=True, on_change=toggle_level_active)
-        chk_box = ft.Checkbox(value=True)
+        chk_box = ft.Checkbox(value=True, width=40)
         name_field = ft.TextField(value=f"{fann} 番", width=90, dense=True)
         score_field = ft.TextField(
             value="4" if i == 1 else "",
@@ -321,10 +321,10 @@ def main(page: ft.Page):
             ft.Divider(),
             ft.Row([
                 ft.Text("", width=40),
-                ft.Text("    Config", width=90, size=14, weight=ft.FontWeight.BOLD),
+                ft.Text("Config", width=90, size=14, weight=ft.FontWeight.BOLD),
                 ft.Text(":"),
-                ft.Text("  自摸每人", width=92, size=14, weight=ft.FontWeight.BOLD),
-                ft.Text("   全銃", width=90, size=14, weight=ft.FontWeight.BOLD),
+                ft.Text("自摸每人", width=90, size=14, weight=ft.FontWeight.BOLD),
+                ft.Text("全銃", width=90, size=14, weight=ft.FontWeight.BOLD),
             ], alignment=ft.MainAxisAlignment.CENTER),
             ft.Column(level_rows_list, spacing=5, horizontal_alignment=ft.CrossAxisAlignment.CENTER),
             ft.Text("Only uncheck top/bottom boxes.", color=ft.Colors.OUTLINE, width=330),
