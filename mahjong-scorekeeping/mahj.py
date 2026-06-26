@@ -253,12 +253,12 @@ def main(page: ft.Page):
                     score_changes[winner] = base_points * 3
                 else:
                     score_changes[player] = -base_points
-            history_text = f"Round {current_round}: {winner} won via 自摸 ({level_name}). Everyone paid {base_points} pts."
+            history_text = f"Round {current_round}: {winner} won | 自摸 {level_name}. Everyone paid {base_points} pts."
         else:
             target_loser = method
             score_changes[winner] = double_points
             score_changes[target_loser] = -double_points
-            history_text = f"Round {current_round}: {winner} won via ({level_name}). {target_loser} paid {double_points} pts."
+            history_text = f"Round {current_round}: {winner} won | {target_loser} 出銃 {level_name}. {target_loser} paid {double_points} pts."
 
         for player, change in score_changes.items():
             player_scores[player] += change
