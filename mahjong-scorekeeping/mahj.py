@@ -19,7 +19,7 @@ def main(page: ft.Page):
     round_history_data = []
     # level_rows = {}
 
-    levels = [1, 2, 3, 4, 5, 6, 7, 10, 13]
+    levels = [3, 4, 5, 6, 7, 8, 9 10, 13]
 
     # --- SCREEN 1: SETUP CONTROLS ---
     txt_p1 = ft.TextField(label="Player 1", width=85, value="P1")
@@ -60,7 +60,7 @@ def main(page: ft.Page):
         chk_box = ft.Checkbox(value=True)
         name_field = ft.TextField(value=f"{fann} 番", width=90, dense=True)
         score_field = ft.TextField(
-            value="1" if i == 1 else "",
+            value="4" if i == 1 else "",
             keyboard_type=ft.KeyboardType.NUMBER,
             width=90,
             dense=True,
