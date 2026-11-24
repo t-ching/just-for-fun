@@ -338,5 +338,5 @@ def main(page: ft.Page):
     # Call the setup screen initially to display it when the app starts
     show_setup_screen()
 
-if __name__ == "__main__":
-    ft.run(main)
+# if __name__ == "__main__":
+#     ft.run(main)
